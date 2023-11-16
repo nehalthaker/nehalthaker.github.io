@@ -745,19 +745,60 @@ h3.my-profession
     /* background: red; */
 }
 /* Project Section */
-.project-Section .project-title
+.project-Section .section-title
 {
     flex : 0 0 100%;
     max-width: 100%;
-    padding-top: 2%;
-
+    margin-top: 100px;
     /* background: red; */
 }
+.project-Section .row .project-item
+{
+    flex: 0 0 50%;
+    max-width: 100%;
+    margin-left: 30%;
+    margin-right: 50%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* background: red; */
+
+ }
 .project-Section .project-item 
 {
-    max-width: 50%;
     margin-bottom: 30px;
+    /* flex: 0 0 33.33%; */
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     flex: 0 0 100%;
-    position: relative;
+    float :left;
+    box-sizing: border-box; 
+    /* background: red; */
+}
+.project-Section .project-item .project-item-inner
+{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    padding: 30px 15px;
+    background-color: var(--bg-black-100);
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+.project-Section .project-item .project-item-inner:hover
+{
+    
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+}
+.project-Section .project-item .project-item-inner .icon
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: all 0.3s ease;
     /* background: red; */
 }
