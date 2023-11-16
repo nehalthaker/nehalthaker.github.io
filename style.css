@@ -744,3 +744,20 @@ h3.my-profession
     font-size: 20px;
     /* background: red; */
 }
+/* Project Section */
+.project-Section .project-title
+{
+    flex : 0 0 100%;
+    max-width: 100%;
+    padding-top: 2%;
+
+    /* background: red; */
+}
+.project-Section .project-item 
+{
+    max-width: 50%;
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+    position: relative;
+    /* background: red; */
+}
