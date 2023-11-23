@@ -366,7 +366,7 @@ h3.my-profession
 {
     display: flex;
     flex-wrap: wrap;
-    /* background: red; */
+    background: red;
     padding-top: 5%;
 }
 .About-Section .About-content .about-text
@@ -744,36 +744,41 @@ h3.my-profession
     font-size: 20px;
     /* background: red; */
 }
-/* Project Section */
-.project-Section .section-title
-{
-    flex : 0 0 100%;
+.project-Section .row .section-title {
+    /* display: flex;
+    flex-wrap: wrap; */
     max-width: 100%;
-    margin-top: 100px;
+    margin-left: 0%;
     /* background: red; */
 }
-.project-Section .row .project-item
-{
-    flex: 0 0 50%;
-    max-width: 100%;
-    margin-left: 30%;
-    margin-right: 50%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+.project-Section .section-title {
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+    margin-left: 100%; 
     /* background: red; */
-
- }
-.project-Section .project-item 
-{
-    margin-bottom: 30px;
-    /* flex: 0 0 33.33%; */
-    max-width: 100%;
+}
+.project-Section .container-items {
     display: flex;
     flex-wrap: wrap;
-    flex: 0 0 100%;
-    float :left;
-    box-sizing: border-box; 
+    max-width: 100%;
+    align-self: center;
+    justify-content: center;
+    margin-left: 0%;
     /* background: red; */
+}
+.project-Section .project-item 
+{
+    margin-left: 10%; /* Consider adjusting or removing this line */
+    padding-left: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 .project-Section .project-item .project-item-inner
 {
@@ -801,4 +806,34 @@ h3.my-profession
     text-align: center;
     transition: all 0.3s ease;
     /* background: red; */
+}
+.project-Section .project-item .project-item-inner .icon .fa
+{
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.project-Section .project-item .project-item-inner:hover .icon
+{
+    background: var(--skin-color);
+}
+.project-Section .project-item .project-item-inner:hover .icon .fa
+{
+    font-size: 25px;
+    color: #ffffff;
+}
+.project-Section .project-item .project-item-inner h4
+{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.project-Section .project-item .project-item-inner p
+{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
 }
