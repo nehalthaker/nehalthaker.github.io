@@ -366,7 +366,7 @@ h3.my-profession
 {
     display: flex;
     flex-wrap: wrap;
-    background: red;
+    /* background: red; */
     padding-top: 5%;
 }
 .About-Section .About-content .about-text
@@ -744,6 +744,28 @@ h3.my-profession
     font-size: 20px;
     /* background: red; */
 }
+.professional-section .professional-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    /* background: red; */
+}
+.professional-section .professional-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+    font-size: 25px;
+    padding-top: 2%;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    list-style-type: square;
+    /* background: red; */
+}
+
+
+
+
+
 .project-Section .row .section-title {
     /* display: flex;
     flex-wrap: wrap; */
