@@ -744,20 +744,118 @@ h3.my-profession
     font-size: 20px;
     /* background: red; */
 }
-/* Project Section */
-.project-Section .project-title
+.professional-section .professional-heading
 {
-    flex : 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
+    /* background: red; */
+}
+.professional-section .professional-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+    font-size: 25px;
     padding-top: 2%;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    list-style-type: square;
+    /* background: red; */
+}
 
+
+
+
+
+.project-Section .row .section-title {
+    /* display: flex;
+    flex-wrap: wrap; */
+    max-width: 100%;
+    margin-left: 0%;
+    /* background: red; */
+}
+.project-Section .section-title {
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+    margin-left: 100%; 
+    /* background: red; */
+}
+.project-Section .container-items {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    align-self: center;
+    justify-content: center;
+    margin-left: 0%;
     /* background: red; */
 }
 .project-Section .project-item 
 {
-    max-width: 50%;
+    margin-left: 10%; /* Consider adjusting or removing this line */
+    padding-left: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-right: 50px;
     margin-bottom: 30px;
-    flex: 0 0 100%;
-    position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.project-Section .project-item .project-item-inner
+{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    padding: 30px 15px;
+    background-color: var(--bg-black-100);
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+.project-Section .project-item .project-item-inner:hover
+{
+    
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+}
+.project-Section .project-item .project-item-inner .icon
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: all 0.3s ease;
     /* background: red; */
+}
+.project-Section .project-item .project-item-inner .icon .fa
+{
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.project-Section .project-item .project-item-inner:hover .icon
+{
+    background: var(--skin-color);
+}
+.project-Section .project-item .project-item-inner:hover .icon .fa
+{
+    font-size: 25px;
+    color: #ffffff;
+}
+.project-Section .project-item .project-item-inner h4
+{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.project-Section .project-item .project-item-inner p
+{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
 }
