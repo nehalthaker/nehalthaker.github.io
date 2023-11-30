@@ -8,11 +8,13 @@
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
 }
+
 body
 {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Crimson Text', sans-serif;
+    /* background: red; */
 }
 *
 {
@@ -22,6 +24,14 @@ body
     text-decoration: none;
     box-sizing: border-box;
 }
+body.dark
+{
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+}
 ::before, ::after
 {
     box-sizing: border-box;
@@ -30,22 +40,52 @@ ul
 {
     list-style: none;
 }
-.home-Section
+.section
 {
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
     padding: 0 30px;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+.section.back-section
+{
+    z-index: 1;
+}
+.section .active
+{
+    z-index: 0;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+@keyframes slideSection
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
 }
 .hidden
 {
     display: none !important;
 }
-.Main-Content
+/* .Main-Content
 {
     padding-left: 270px;
-}
+} */
 .padd-15
 {
     padding-left: 15px;
@@ -121,6 +161,7 @@ ul
     align-items: center;
     z-index: 10;
     border-right: 1px solid var(--bg-black-50);
+    transition: all 0.3s ease;
 }
 .Aside .logo 
 {
@@ -179,6 +220,7 @@ ul
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 .Aside .nav-toggler span
 {
@@ -188,6 +230,10 @@ ul
     display: inline-block;
     position: relative;
 
+}
+.Aside .nav-toggler.open span
+{
+    background-color: transparent;
 }
 .Aside .nav-toggler span::before
 {
@@ -199,6 +245,11 @@ ul
     top: -6px;
     left: 0;
 }
+.Aside .nav-toggler.open span::before
+{
+    transform: rotate(45deg);
+    top: 0;
+}
 .Aside .nav-toggler span::after
 {
     content: '';
@@ -208,6 +259,11 @@ ul
     position: absolute;
     top: 6px;
     left: 0;
+}
+.Aside .nav-toggler.open span::after
+{
+    transform: rotate(-45deg);
+    top: 0;
 }
 .Aside .nav
 {
@@ -425,7 +481,6 @@ h3.my-profession
 }
 .About-Section .About-content .personal-info .buttons .btn
 {
-    margin-right: 15px;
     margin-top: 10px;
 }
 .About-Section .About-content .skills
@@ -1108,14 +1163,37 @@ h3.my-profession
 }
 @media(max-width: 1199px)
 {
-    .aside
+    .section .container
+    {
+        padding-top: 70px;
+    }
+    .Aside
     {
         left: -270px;
     }
-    .main-content
+    .Aside .nav-toggler
+    {
+        display: flex;
+        left: 30px;
+    }
+    .Aside .nav-toggler.open
+    {
+        left: 300px;
+    }
+    .section
+    {
+        left: 0%;
+    }
+    .section.open
+    {
+        left: 270px;
+    }
+
+
+    /* .main-content
     {
         padding-left: 0;
-    }
+    } */
     .about .about-content .personal-info .info-item p span
     {
         display: block;
