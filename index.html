@@ -7,11 +7,27 @@
     <title>Personal Portfolio</title>
     <!-- CSS Files -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- style-switcher -->
+    <link rel="stylesheet" href="color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="style-switcher.css">
     
 </head>
 <body>
+    <!-- <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('dark');
+        });
+    </script> -->
     <!-- main container start -->
     <div class="main-container">
         <div class="Aside">
@@ -32,14 +48,14 @@
         </div>
         <!-- HOME SECTION -->
         <div class="Main-Content">
-            <section class="home-Section padd-15 ">
+            <section class="home-Section active padd-15 ">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">Hello, My Name is <span class="Name"> Nehal Thaker </span></h3>
                             <h3 class="my-profession">I'm a <span class="typing"> Robotics Engineer</span></h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nihil possimus obcaecati dolorum quisquam odio vitae ratione excepturi, autem dolor minus repellendus. Minus ullam distinctio, esse placeat veniam sequi eveniet?</p> 
-                            <a href="#contact" class="btn">Hire Me</a>
+                            <a href="Nehal_Thaker_Technical_CV.pdf" class="btn">Download CV</a>
                         </div>
                         <div class="home-img padd-15">
                             <img src="Nehal_T.jpg" alt="Nehal">
@@ -97,8 +113,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="#" class="btn">Download CV</a>
-                                            <a href="#contact" class="btn hire me">Hire Me</a>
+                                            <a href="#contact-section" data-section-index="1" class="btn hire me">Hire Me</a>
                                         </div>
                                     </div>
                                 </div>
@@ -207,7 +222,7 @@
                                                     <h4 class="timeline-title">Masters in Robotics and Autonomous Systems</h4>
                                                     <p class="timeline-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem corrupti nihil, nisi veniam facilis vel dolor molestiae, excepturi animi explicabo quis tempore quaerat soluta necessitatibus eos commodi dolores magnam laboriosam.</p>
                                                     <div class="Read-buttons padd-15">
-                                                        <a href="#" class="btn">
+                                                        <a href="#Education" class="btn">
                                                             Read more
                                                         </a>
                                                     </div>
@@ -237,7 +252,7 @@
                                                 <h4 class="timeline-title">Masters in Robotics and Autonomous Systems</h4>
                                                 <p class="timeline-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem corrupti nihil, nisi veniam facilis vel dolor molestiae, excepturi animi explicabo quis tempore quaerat soluta necessitatibus eos commodi dolores magnam laboriosam.</p>
                                                 <div class="Read-buttons padd-15">
-                                                    <a href="#" class="btn">
+                                                    <a href="#Professional Experience" class="btn">
                                                         Read more
                                                     </a>
                                                 </div>
@@ -501,7 +516,27 @@
         </div> 
     </div> 
     <!-- main container end -->
+    <!-- style switcher start -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- style switcher end -->
     <!-- js files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
     <script src="script.js"></script>
+    <script src="style-switcher.js"></script>
 </body>
 </html>
