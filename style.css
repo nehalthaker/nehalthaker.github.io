@@ -973,6 +973,7 @@ h3.my-profession
     max-width: 100%;
     align-self: center;
     justify-content: center;
+    margin-left: 7%;
     /* background: red; */
 }
 .project-section .project-item 
